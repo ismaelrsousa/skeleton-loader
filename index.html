@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/css/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container content">
+        <div class="left">
+          <a href="#" class="logo-container">
+            <i class="fa-brands fa-linkedin logo"></i>
+          </a>
+
+          <input type="text" placeholder="Search" class="input" name="search">
+        </div>
+
+        <div class="menu">
+          <ul class="list">
+            <li>
+              <a href="#" class="item active">
+                <i class="fa-solid fa-house-chimney icon"></i>
+                <p class="desc">Home</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <i class="fa-solid fa-people-group icon"></i>
+                <p class="desc">My Network</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <i class="fa-solid fa-suitcase icon"></i>
+                <p class="desc">Jobs</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <i class="fa-solid fa-comment-dots icon"></i>
+                <p class="desc">Messaging</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <i class="fa-solid fa-bell icon"></i>
+                <p class="desc">Notifications</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="home-page loading">
+      <div class="container">
+        <aside class="aside">
+          <div class="card">
+            <div class="profile-pic">
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="profile-pic">
+
+            </div>
+          </div>
+        </aside>
+
+        <div class="content">
+          <div class="card">
+
+          </div>
+
+          <hr>
+
+          <div class="card"></div>
+        </div>
+
+        <div class="news">
+          <div class="card">
+            <ul class="list">
+              <li class="item"></li>
+              <li class="item"></li>
+              <li class="item"></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <ul class="list">
+              <li class="item"></li>
+              <li class="item"></li>
+              <li class="item"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+
+    <script>
+
+      let interval = setTimeout(() => {
+        document.querySelector(".home-page").classList.remove("loading");
+      }, 4000)
+
+    </script>
+  </body>
+</html>

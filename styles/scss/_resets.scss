@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  font-family: $font;
+  -webkit-tap-highlight-color: rgba(#fff, 0);
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f3f2ef;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 1400px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+a[href] { color: #000; }

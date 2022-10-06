@@ -1,0 +1,99 @@
+main.home-page {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .card {
+      background-color: #FFF;
+      width: 100%;
+      border: 1px solid #DDD;
+      border-radius: 8px;
+      position: relative;
+      padding: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .aside {
+      flex-shrink: 0;
+      max-width: 220px;
+      width: 100%;
+
+      .card {
+        height: 300px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          background-color: #bfd3d6;
+          border-radius: 8px 8px 0 0;
+        }
+      }
+    }
+    
+    .content {
+      margin: 0 1rem;
+      width: 100%;
+
+      hr {
+        margin: 1rem 0;
+        flex-shrink: 0;
+        border-bottom: 1px solid #DDD;
+      }
+      
+      .card {
+        height: 250px;
+      }
+    }
+
+    .news {
+      flex-shrink: 0;
+      max-width: 300px;
+      width: 100%;
+
+      .card {
+        height: 300px;
+      }
+    }
+  }
+
+  &.loading {
+    .container {
+      .card {
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+          background-color: #FFF;
+          animation: loading 2s infinite;
+          background: linear-gradient(to right, #FAFAFA 0%, #EEE 50%, #FAFAFA 100%);
+          background-size: 400% 400%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

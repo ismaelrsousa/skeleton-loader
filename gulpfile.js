@@ -1,21 +1,14 @@
 const gulp = require("gulp"),
-  sass = require("gulp-sass"),
+  sass = require("gulp-sass")(require("sass")),
   concat = require("gulp-concat"),
-  rename = require("gulp-rename"),
-  minify = require("gulp-minify"),
-  imagemin = require("gulp-imagemin");
+  minify = require("gulp-minify");
 
 const paths = {
   dev: {
-    scss: "assets/scss/**/*.scss",
-    js: "assets/js/**/*.js",
-    jsLibs: "assets/js/libs/*.js",
-    img: "assets/img/**",
+    scss: "styles/scss/**/*.scss",
   },
   dist: {
-    css: "public/css/",
-    js: "public/js",
-    img: "public/img/",
+    css: "styles/css/",
   },
 };
 
@@ -41,12 +34,12 @@ function compImg() {
 
 function watchFiles() {
   gulp.watch(paths.dev.scss, gulp.series("compScss"));
-  gulp.watch([paths.dev.js, paths.dev.jsLibs], gulp.series("compJs"));
-  gulp.watch(paths.dev.img, gulp.series("compImg"));
+  // gulp.watch([paths.dev.js, paths.dev.jsLibs], gulp.series("compJs"));
+  // gulp.watch(paths.dev.img, gulp.series("compImg"));
 }
 
 gulp.task("compScss", compScss);
-gulp.task("compJs", compJs);
-gulp.task("compImg", compImg);
+// gulp.task("compJs", compJs);
+// gulp.task("compImg", compImg);
 gulp.task("watch", watchFiles);
 gulp.task("default", gulp.series("watch"));
